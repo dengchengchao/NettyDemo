@@ -1,5 +1,6 @@
 package com.dengchengchao.demo.netty.server;
 
+import com.dengchengchao.demo.netty.client.LifeCycleHandler;
 import com.sun.corba.se.internal.CosNaming.BootstrapServer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
@@ -29,6 +30,8 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     public void initChannel(NioSocketChannel ch) {
+                        ch.pipeline().addLast(new LifeCycleHandler());
+                        ch.pipeline().addLast(new LifeCycleHandler());
                         ch.pipeline().addLast(new ServerHandler());
                     }
                 }).bind(8089);

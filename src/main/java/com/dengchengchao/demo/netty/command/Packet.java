@@ -1,4 +1,4 @@
-package com.dengchengchao.demo.netty.common;
+package com.dengchengchao.demo.netty.command;
 
 import lombok.Data;
 import lombok.Getter;

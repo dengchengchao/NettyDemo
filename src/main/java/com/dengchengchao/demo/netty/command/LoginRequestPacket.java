@@ -1,8 +1,7 @@
-package com.dengchengchao.demo.netty.common;
+package com.dengchengchao.demo.netty.command;
 
 import lombok.Getter;
 import lombok.Setter;
-import sun.rmi.runtime.Log;
 
 /**
  * @author dengchengchao
